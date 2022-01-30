@@ -17,7 +17,7 @@ namespace FrontToBack.ViewModels
         public IEnumerable<BlogsSlider> BlogsSliders { get; set; }
         public IEnumerable<InstagramSlider> InstagramSliders { get; set; }
 
-
+        public IEnumerable<Comments> Comments { get; set; }
 
 
     }

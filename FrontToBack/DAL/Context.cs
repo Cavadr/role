@@ -25,7 +25,7 @@ namespace FrontToBack.DAL
         public DbSet<InstagramSlider> InstagramSliders { get; set; }
         public DbSet<Bio> Bios { get; set; }
 
-
+        public DbSet<Comments> Comments { get; set; }
 
     }
 }
