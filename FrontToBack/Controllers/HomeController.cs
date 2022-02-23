@@ -32,7 +32,7 @@ namespace FrontToBack.Controllers
             List<Blogs> blogs = _context.Blogs.ToList();
             List<BlogsSlider> blogslider = _context.BlogsSliders.ToList();
             List<InstagramSlider> instagram = _context.InstagramSliders.ToList();
-            List<Comments> comments = _context.Comments.ToList();
+            //List<Comments> comments = _context.Comments.ToList();
 
             HomeVm homeVm = new HomeVm();
             homeVm.Sliders = sliders;
@@ -43,7 +43,7 @@ namespace FrontToBack.Controllers
             homeVm.Blogs = blogs;
             homeVm.BlogsSliders = blogslider;
             homeVm.InstagramSliders = instagram;
-            homeVm.Comments = comments;
+            //homeVm.Comments = comments;
             return View(homeVm);
         }
         public IActionResult GetSession()

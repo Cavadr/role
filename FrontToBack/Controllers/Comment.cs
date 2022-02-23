@@ -10,38 +10,37 @@ namespace FrontToBack.Controllers
 {
     public class Comment : Controller
     {
-        private readonly CommentManager<IdentityComment> _roleManager;
-        private readonly Context _context;
-        public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //private readonly Context _context;
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
 
-        public async Task<IActionResult> Create(string role)
-        {
-            if (!string.IsNullOrEmpty(role))
-            {
-                if (!await _roleManager.RoleExistsAsync(role))
-                {
-                    await _roleManager.CreateAsync(new IdentityRole(role));
-                }
-                return RedirectToAction("Index");
-            }
+        //public async Task<IActionResult> Create(string comment)
+        //{
+        //    if (!string.IsNullOrEmpty(comment))
+        //    {
+        //        if (!await _commentManager.RoleExistsAsync(comment))
+        //        {
+        //            await _commentManager.CreateAsync(new IdentityRole(comment));
+        //        }
+        //        return RedirectToAction("Index");
+        //    }
 
-            return NotFound();
-        }
+        //    return NotFound();
+        //}
 
-        public async Task<IActionResult> Delete(string Id)
-        {
-            var rolee = await _roleManager.FindByIdAsync(Id);
-            await _roleManager.DeleteAsync(rolee);
+        //public async Task<IActionResult> Delete(string Id)
+        //{
+        //    var commentt = await _commentManager.FindByIdAsync(Id);
+        //    await _commentManager.DeleteAsync(commentt);
 
-            return RedirectToAction(nameof(Index));
+        //    return RedirectToAction(nameof(Index));
 
-        }
+        //}
     }
 }
